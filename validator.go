@@ -16,7 +16,7 @@ type Passport struct {
 	ExpirationDate Date
 }
 
-func isPassportValid(passport Passport, returnDate Date) bool {
+func IsPassportValid(passport Passport, returnDate Date) bool {
 	if passport.Country != "US" {
 		return false
 	}
@@ -39,5 +39,5 @@ func main() {
 	fmt.Println("Welcome to your passport validator")
 	passport := Passport{Country: "US", ExpirationDate: Date{Year: 2020}}
 	date := Date{Year: 2021}
-	fmt.Println(isPassportValid(passport, date))
+	fmt.Println(IsPassportValid(passport, date))
 }
